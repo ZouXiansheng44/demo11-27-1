@@ -13,4 +13,6 @@ public interface QuestionCollectRepository extends JpaRepository<QuestionCollect
     public List<QuestionCollect> findByCollectStatus(Integer collectStatus);
     public QuestionCollect findByQuestionIdAndUserId(Integer questionId,Integer userId);
     public List<QuestionCollect> findByCollectStatusAndUserId(Integer collectStatus,Integer userId);
+    public QuestionCollect findByQuestionIdAndUserIdAndCollectStatus(Integer questionId,Integer userId,Integer collectStatus);
+    public QuestionCollect deleteByCollectId(Integer collectId);
  }

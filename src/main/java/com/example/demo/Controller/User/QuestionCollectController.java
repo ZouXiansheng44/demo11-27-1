@@ -62,7 +62,7 @@ public class QuestionCollectController {
         questionCollect.setUserId(userId);
         questionCollect.setQuestionId(questionId);
         //此判断是为了禁止重复收藏
-        QuestionCollect questionCollect2=questionCollectServiceImpi.findByQuestionIdAndUserId( questionId,userId);
+        QuestionCollect questionCollect2=questionCollectServiceImpi.findByQuestionIdAndUserIdAndCollectStatus( questionId,userId,0);
         if (questionCollect2==null){
             questionCollectServiceImpi.save(questionCollect);
             return Msg.success();
@@ -94,4 +94,11 @@ public class QuestionCollectController {
         questionCollectServiceImpi.OffCollect(questionCollect.getQuestionId());
         return Msg.success();
     }
+
+    @DeleteMapping("/delete2")
+    public Msg delete2(@RequestParam("collectId") Integer collectId){
+        questionCollectServiceImpi.deleteByCollectId(collectId);
+        return Msg.success();
+    }
+
 }

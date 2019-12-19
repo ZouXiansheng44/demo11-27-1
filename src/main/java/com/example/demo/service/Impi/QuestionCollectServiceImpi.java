@@ -49,6 +49,16 @@ public class QuestionCollectServiceImpi implements QuestionCollectService
     }
 
     @Override
+    public QuestionCollect findByQuestionIdAndUserIdAndCollectStatus(Integer questionId, Integer userId, Integer collectStatus) {
+        return questionCollectRepository.findByQuestionIdAndUserIdAndCollectStatus(questionId,userId,collectStatus);
+    }
+
+    @Override
+    public QuestionCollect deleteByCollectId(Integer collectId) {
+        return questionCollectRepository.deleteByCollectId(collectId);
+    }
+
+    @Override
     public QuestionCollect OnCollect(Integer userId) {
         QuestionCollect questionCollect=questionCollectRepository.findByCollectId(userId);
         if(questionCollect==null){

@@ -12,6 +12,8 @@ public interface QuestionCollectService {
     public List<QuestionCollect> findByUserId(Integer userId);
     public List<QuestionCollect> findByCollectStatus(Integer collectStatus);
     public List<QuestionCollect> findByCollectStatusAndUserId(Integer collectStatus,Integer userId);
+    public QuestionCollect findByQuestionIdAndUserIdAndCollectStatus(Integer questionId,Integer userId,Integer collectStatus);
+    public QuestionCollect deleteByCollectId(Integer collectId);
     //收藏
     QuestionCollect OnCollect(Integer userId);
     //不收藏
