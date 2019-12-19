@@ -20,6 +20,7 @@ import java.util.Date;
 @DynamicUpdate
 public class UserInfo
 {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//主键自增长
     private Integer userId;
@@ -28,7 +29,7 @@ public class UserInfo
     private String userEmail;
     private String userPhone;
     private String userIcon;
-
+//
     //使用@JsonSerialize注解，让返回的JSON对象中Date类型的数据显示的时间戳精确到秒
     @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;

@@ -26,7 +26,6 @@ public class QuestionCollect {
     private Integer questionId;
     private Integer userId;
     private Integer collectStatus;
-
     @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
     @JsonSerialize(using = Date2LongSerializer.class)

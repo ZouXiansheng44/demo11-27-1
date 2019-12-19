@@ -11,4 +11,5 @@ public interface QuestionBankService {
     QuestionBank save(QuestionBank questionBank);
     List<QuestionBank> findByQuestionSubject(String questionSubject);
     public List<QuestionBank> findByQuestionType(String questionType);
+    public List<QuestionBank> findByQuestionId2(Integer questionId);
 }

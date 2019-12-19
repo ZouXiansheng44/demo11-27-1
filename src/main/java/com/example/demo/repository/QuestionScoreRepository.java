@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface QuestionScoreRepository extends JpaRepository<QuestionScore,Integer > {
 
-    public List<QuestionScore> findByQuestionType(String questionType);
+    public QuestionScore findByQuestionType(String questionType);
 }

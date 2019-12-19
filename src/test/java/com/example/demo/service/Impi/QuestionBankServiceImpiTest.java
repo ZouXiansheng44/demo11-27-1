@@ -111,4 +111,17 @@ class QuestionBankServiceImpiTest {
         System.out.println(b);
     }
     }
+    @Test
+    void Random1(){
+        List<QuestionBank> questionBankList=questionBankServiceImpi.findAll();
+        for (QuestionBank questionBank: questionBankList)
+        {
+            Random random=new Random(questionBank.getQuestionId());
+
+        }
+
+        }
+        QuestionBank questionBank=new QuestionBank();
+
+
 }

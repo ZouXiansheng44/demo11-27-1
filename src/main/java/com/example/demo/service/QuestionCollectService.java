@@ -8,4 +8,13 @@ public interface QuestionCollectService {
     public QuestionCollect findByCollectId(Integer collectId);
     public List<QuestionCollect> findAll();
     public QuestionCollect save(QuestionCollect questionCollect);
+    //
+    public List<QuestionCollect> findByUserId(Integer userId);
+    public List<QuestionCollect> findByCollectStatus(Integer collectStatus);
+    public List<QuestionCollect> findByCollectStatusAndUserId(Integer collectStatus,Integer userId);
+    //收藏
+    QuestionCollect OnCollect(Integer userId);
+    //不收藏
+    QuestionCollect OffCollect(Integer userId);
+    public QuestionCollect findByQuestionIdAndUserId(Integer questionId,Integer userId);
 }

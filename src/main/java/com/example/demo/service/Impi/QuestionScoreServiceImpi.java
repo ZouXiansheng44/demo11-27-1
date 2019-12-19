@@ -14,7 +14,8 @@ public class QuestionScoreServiceImpi implements QuestionScoreService {
     @Autowired
     private QuestionScoreRepository questionScoreRepository;
     @Override
-    public List<QuestionScore> findByQuestionType(String questionType) {
+    public QuestionScore findByQuestionType(String questionType) {
         return questionScoreRepository.findByQuestionType(questionType);
     }
+
 }
